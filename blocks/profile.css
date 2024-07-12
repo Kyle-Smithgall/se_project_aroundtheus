@@ -1,0 +1,62 @@
+.profile {
+  margin: 40px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+}
+
+.profile__info {
+  display: grid;
+  padding: 0;
+  grid-template-areas:
+    "title button"
+    "subtitle subtitle";
+}
+
+.profile__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  margin: 0;
+  grid-area: "title";
+}
+
+.profile__edit-button {
+  background: transparent url(../images/edit_pencil.svg) center no-repeat;
+  background-color: black;
+  border: solid white 1px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 15px 0 0 18px;
+  grid-area: "button";
+  cursor: pointer;
+}
+
+.profile__subtitle {
+  margin: 16px 0 0;
+  padding: 0;
+  grid-area: "subtitle";
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.profile__add-button {
+  margin-left: auto;
+  background: transparent url(../images/plus.svg) center no-repeat;
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: solid white 2px;
+  cursor: pointer;
+}

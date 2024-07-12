@@ -1,3 +1,10 @@
-header {
+.header {
   border-bottom: solid 1px #545454;
+  max-height: 74px;
+  padding: 0 0 41px;
+}
+
+.header__logo {
+  width: 173px;
+  height: 33px;
 }
