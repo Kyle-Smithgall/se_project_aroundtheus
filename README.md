@@ -1,5 +1,7 @@
 # Project 3: Around The U.S.
 
+[View the site here](https://kyle-smithgall.github.io/se_project_aroundtheus/)
+
 ### Overview  
 
 * Intro  
