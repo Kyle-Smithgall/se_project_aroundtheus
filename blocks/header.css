@@ -1,6 +1,5 @@
 .header {
-  border-bottom: solid 1px #545454;
-  max-height: 74px;
+  border-bottom: solid 1px rgba(84, 84, 84, 0.7);
   padding: 0 0 41px;
 }
 
@@ -9,9 +8,9 @@
   height: 33px;
 }
 
-@media screen and (max-width: 636px) {
+@media screen and (max-width: 634px) {
   .header {
-    padding: 0 0 32px;
+    padding: 0 0 32px 27px;
   }
 
   .header__logo {

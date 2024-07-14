@@ -4,9 +4,21 @@
 }
 
 .footer__copyright {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
   margin: 0;
+}
+
+@media screen and (max-width: 634px) {
+  .footer {
+    margin: 48px 0 0;
+    padding: 0 0 0 19px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
