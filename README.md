@@ -10,7 +10,7 @@
 
 **Intro**
 
-This project showcases my knowledge of responsive web development within the format of a photography portfolio. While the design is not yet interactive, there hover effects indicate where the user will be able to edit, add photos, and like images on the page. Feel free to manipulate the size of your browser window, or view the site on a different device. The page will be responsive from 320px to 1280px resolution.
+This project showcases my knowledge of responsive web development within the format of a photography portfolio. While the design is not yet interactive, the hover effects indicate where the user will be able to edit, add photos, and like images on the page. Feel free to manipulate the size of your browser window, or view the site on a different device. The page will be responsive from 320px to 1280px resolution.
 
 **Figma**
 
