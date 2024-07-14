@@ -8,3 +8,15 @@
   width: 173px;
   height: 33px;
 }
+
+@media screen and (max-width: 636px) {
+  .header {
+    padding: 0 0 32px;
+  }
+
+  .header__logo {
+    width: 126px;
+    height: 24px;
+    margin: 0 0 0 8px;
+  }
+}

@@ -3,7 +3,12 @@
   padding: 0;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 17px 20px;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-gap: 20px 17px;
+}
+
+@media screen and (max-width: 636px) {
+  .cards {
+    margin: 36px 0 0;
+  }
 }

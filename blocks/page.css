@@ -3,10 +3,16 @@
   color: #fff;
   background-color: black;
   margin: 0 auto;
-  padding: 45px 0 0;
+  padding: 45px 19px 60px;
 }
 
 .page__content {
-  margin: 0 200px;
+  margin: 0 auto;
   max-width: 880px;
+}
+
+@media screen and (max-width: 636px) {
+  .page {
+    padding: 28px 19px 36px;
+  }
 }
