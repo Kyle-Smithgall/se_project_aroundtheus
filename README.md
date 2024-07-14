@@ -1,23 +1,24 @@
 # Project 3: Around The U.S.
 
-[View the site here](https://kyle-smithgall.github.io/se_project_aroundtheus/)
+[Visit the Around the U.S. site here](https://kyle-smithgall.github.io/se_project_aroundtheus/)
 
-### Overview  
+### Overview
 
-* Intro  
-* Figma  
-* Images  
-  
+- Photo portfolio
+- Responsive development
+- Minimalist design
+
 **Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)  
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+
+This project showcases my knowledge of responsive web development within the format of a photography portfolio. While the design is not yet interactive, there hover effects indicate where the user will be able to edit, add photos, and like images on the page. Feel free to manipulate the size of your browser window, or view the site on a different device. The page will be responsive from 320px to 1280px resolution.
+
+**Figma**
+
+- [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
+
+**Future Improvements**
+
+- Adding interactive elements to the page. Allowing for photos to be added and the profile section to be edited.
+- Adding multiple profile/folder options. Maybe the user can have different categories to organize their photos.
+- Adding a feature that allows the user to click and expand a certain image in their browser window.
+- With the edit functionality, maybe the user can manipulate the order in which the photos are displayed on the page.
