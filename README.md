@@ -1,8 +1,8 @@
 # Project 3: Around The U.S.
 
-[Visit the Around the U.S. site here](https://kyle-smithgall.github.io/se_project_aroundtheus/)
+[Visit the Around the U.S. site here](https://kyle-smithgall.github.io/se_project_aroundtheus/){:target="\_blank"}
 
-[Video Walkthrough](https://www.loom.com/share/68ecd0b78b10417dbcf7e8ab60ed0288?sid=9a5b0269-4c92-40c4-9606-60cbfb4ee4ca)
+[Video Walkthrough](https://www.loom.com/share/68ecd0b78b10417dbcf7e8ab60ed0288?sid=9a5b0269-4c92-40c4-9606-60cbfb4ee4ca){:target="\_blank"}
 
 ### Overview
 
