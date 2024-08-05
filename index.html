@@ -46,6 +46,7 @@
         <p class="footer__copyright">© 2022 Around The U.S.</p>
       </footer>
     </div>
+    <!-- Edit Profile Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -62,14 +63,14 @@
               name="title"
               class="modal__form-input"
               id="profile-title-input"
-              placeholder="Jacques Cousteau"
+              placeholder="Title"
             />
             <input
               type="text"
               name="subtitle"
               class="modal__form-input"
               id="profile-subtitle-input"
-              placeholder="Explorer"
+              placeholder="Image URL"
             />
           </fieldset>
           <button type="submit" name="save" class="modal__form-button">
@@ -78,6 +79,40 @@
         </form>
       </div>
     </div>
+    <!-- Add Card Modal -->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button
+          type="button"
+          name="close"
+          id="modal-close-button"
+          class="modal__close"
+        ></button>
+        <h3 class="modal__heading">New Place</h3>
+        <form class="modal__form" id="add-card-form">
+          <fieldset class="modal__form-fieldset">
+            <input
+              type="text"
+              name="title"
+              class="modal__form-input"
+              id="add-card-title-input"
+              placeholder="Jacques Cousteau"
+            />
+            <input
+              type="text"
+              name="url"
+              class="modal__form-input"
+              id="add-card-url-input"
+              placeholder="Explorer"
+            />
+          </fieldset>
+          <button type="submit" name="save" class="modal__form-button">
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
