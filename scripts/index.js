@@ -68,16 +68,18 @@ function renderCard(data, list) {
 }
 
 function getCardElement(data) {
-  //clone the template element with all its content and store it in a cardElement variable
   const cardElement = cardTemplate.cloneNode(true);
-
-  //access the card title and image and store them in variables
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__heart-icon");
 
-  cardImageEl.src = data.link; //set the path to the image to the link field of the object
-  cardImageEl.alt = data.name; //set the image alt text to the name field of the object
-  cardTitleEl.textContent = data.name; //set the card title to the name field of the object
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__heart-icon_active");
+  });
+
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  cardTitleEl.textContent = data.name;
 
   return cardElement;
 }
