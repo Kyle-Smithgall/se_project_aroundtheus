@@ -30,9 +30,7 @@ const initialCards = [
 
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
-const profileModalCloseButton = profileEditModal.querySelector(
-  "#modal-close-button"
-);
+const profileModalCloseButton = profileEditModal.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileSubtitle = document.querySelector(".profile__subtitle");
 const profileTitleInput = document.querySelector("#profile-title-input");
@@ -41,9 +39,7 @@ const profileEditForm = document.querySelector("#modal-profile-form");
 
 const addCardModal = document.querySelector("#add-card-modal");
 const addCardButton = document.querySelector(".profile__add-button");
-const addCardModalCloseButton = addCardModal.querySelector(
-  "#modal-close-button"
-);
+const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
 const addCardTitleInput = document.querySelector("#add-card-title-input");
 const addCardLinkInput = document.querySelector("#add-card-link-input");
 const addCardForm = document.querySelector("#add-card-form");
@@ -73,6 +69,12 @@ function getCardElement(data) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__heart-icon");
   const deleteButton = cardElement.querySelector(".card__delete-icon");
+  const pictureModal = document.querySelector("#picture-modal");
+  const pictureModalCaption = pictureModal.querySelector(
+    ".modal__picture-caption"
+  );
+  const pictureModalPhoto = pictureModal.querySelector(".modal__picture");
+  const pictureModalCloseButton = pictureModal.querySelector(".modal__close");
 
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__heart-icon_active");
@@ -81,6 +83,16 @@ function getCardElement(data) {
   deleteButton.addEventListener("click", () => {
     cardElement.remove();
   });
+
+  cardImageEl.addEventListener("click", () => {
+    openModal(pictureModal);
+    pictureModalPhoto.src = cardImageEl.src;
+    pictureModalCaption.textContent = cardTitleEl.textContent;
+  });
+
+  pictureModalCloseButton.addEventListener("click", () =>
+    closeModal(pictureModal)
+  );
 
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
