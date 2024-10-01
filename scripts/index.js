@@ -118,6 +118,22 @@ function handleAddCardCreate(evt) {
   closeModal(addCardModal);
 }
 
+function handleEscapeKeydownCloseModal(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
+function handleOverlayClickCloseModal(evt) {
+  const openModal = document.querySelector(".modal_opened");
+  if (openModal && evt.target === openModal) {
+    closeModal(openModal);
+  }
+}
+
 // EVENT LISTENERS
 // ---------------------------------------------------------------------------------------------
 
@@ -139,3 +155,7 @@ closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));
 });
+
+document.addEventListener("keydown", handleEscapeKeydownCloseModal);
+
+document.addEventListener("click", handleOverlayClickCloseModal);
