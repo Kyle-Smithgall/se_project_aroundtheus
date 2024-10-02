@@ -158,4 +158,4 @@ closeButtons.forEach((button) => {
 
 document.addEventListener("keydown", handleEscapeKeydownCloseModal);
 
-document.addEventListener("click", handleOverlayClickCloseModal);
+document.addEventListener("mousedown", handleOverlayClickCloseModal);
