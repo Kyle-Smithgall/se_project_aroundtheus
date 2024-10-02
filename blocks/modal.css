@@ -47,6 +47,7 @@
   padding: 34px;
   background-color: #fff;
   border-radius: 10px;
+  position: relative;
 }
 
 .modal__heading {
@@ -80,6 +81,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  display: relative;
 }
 
 .modal__label {
