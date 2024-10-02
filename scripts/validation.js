@@ -6,7 +6,7 @@ function setEventListeners(formEl, options) {
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", (evt) => {
-      console.log(inputEl.validity);
+      console.log(inputEl.validationMessage);
     });
   });
 }
@@ -27,8 +27,8 @@ const config = {
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__form-button",
   inactiveButtonClass: ".modal__form-button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: ".modal__error",
 };
 
 enableValidation(config);
