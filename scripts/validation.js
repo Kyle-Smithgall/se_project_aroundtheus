@@ -1,6 +1,3 @@
-// enabling validation by calling enableValidation()
-// pass all the settings on call
-
 function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.remove(inputErrorClass);
@@ -21,7 +18,6 @@ function checkInputValidity(formEl, inputEl, options) {
   }
   hideInputError(formEl, inputEl, options);
 }
-////////////////
 
 function disableButton(submitButton, classBeingAdded) {
   submitButton.classList.add(classBeingAdded);
@@ -33,14 +29,6 @@ function enableButton(submitButton, classBeingAdded) {
   submitButton.disabled = false;
 }
 
-// function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
-//   if (hasInvalidInput(inputEls)) {
-//     disableButton(submitButton, inactiveButtonClass);
-//   }
-//   enableButton(submitButton, inactiveButtonClass);
-// }
-
-////////////////////
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   let foundInvalid = false;
 
