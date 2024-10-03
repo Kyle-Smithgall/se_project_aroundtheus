@@ -112,9 +112,14 @@ function handleAddCardCreate(evt) {
 
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
+  const cardSubmitButton = document.querySelector("#card-submit-button");
   renderCard({ name, link }, cardListEl);
 
   evt.target.reset();
+
+  cardSubmitButton.classList.add("modal__form-button_disabled");
+  cardSubmitButton.disabled = true;
+
   closeModal(addCardModal);
 }
 

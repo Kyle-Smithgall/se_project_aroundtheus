@@ -124,6 +124,10 @@
   left: 0px;
 }
 
+.modal__input_type_error {
+  border-bottom: 1px solid #ff0000;
+}
+
 .modal__form-button {
   margin: 48px 0 0;
   padding: 19px 0;
