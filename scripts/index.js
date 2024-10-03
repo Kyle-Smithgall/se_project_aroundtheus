@@ -57,15 +57,19 @@ const closeButtons = document.querySelectorAll(".modal__close");
 // ---------------------------------------------------------------------------------------------
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscapeKeydownCloseModal);
+  modal.addEventListener("mousedown", handleOverlayClickCloseModal);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscapeKeydownCloseModal);
+  modal.removeEventListener("mousedown", handleOverlayClickCloseModal);
 }
 
-function renderCard(data, list) {
+function renderCard(data, list, method) {
   const cardElement = getCardElement(data);
-  list.prepend(cardElement);
+  list[method](cardElement);
 }
 
 function getCardElement(data) {
@@ -113,7 +117,7 @@ function handleAddCardCreate(evt) {
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
   const cardSubmitButton = document.querySelector("#card-submit-button");
-  renderCard({ name, link }, cardListEl);
+  renderCard({ name, link }, cardListEl, method);
 
   evt.target.reset();
 
@@ -133,9 +137,8 @@ function handleEscapeKeydownCloseModal(evt) {
 }
 
 function handleOverlayClickCloseModal(evt) {
-  const openModal = document.querySelector(".modal_opened");
-  if (openModal && evt.target === openModal) {
-    closeModal(openModal);
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
   }
 }
 
@@ -154,13 +157,11 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 
 addCardForm.addEventListener("submit", handleAddCardCreate);
 
-initialCards.forEach((data) => renderCard(data, cardListEl));
+initialCards.forEach((data) =>
+  renderCard(data, cardListEl, (method = "prepend"))
+);
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));
 });
-
-document.addEventListener("keydown", handleEscapeKeydownCloseModal);
-
-document.addEventListener("mousedown", handleOverlayClickCloseModal);
