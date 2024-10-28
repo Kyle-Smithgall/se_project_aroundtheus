@@ -169,7 +169,7 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardForm.addEventListener("submit", handleAddCardCreate);
 
 initialCards.forEach((data) => {
-  renderCard(data, cardListEl, (method = "prepend"));
+  renderCard(data, cardListEl, "prepend");
 });
 
 closeButtons.forEach((button) => {
