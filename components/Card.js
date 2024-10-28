@@ -36,22 +36,20 @@ export default class Card {
     this._cardElement.remove();
   }
 
-  _getTemplate() {
-    const cardElement = document
+  generateCard() {
+    this._cardElement = document
       .querySelector(this._cardSelector)
       .content.querySelector(".card")
       .cloneNode(true);
-    return cardElement;
-  }
 
-  generateCard() {
-    this._element = this._getTemplate();
+    this._cardElement.querySelector(".card__image").src = this._link;
+    this._cardElement.querySelector(".card__title").alt = this._name;
+    this._cardElement.querySelector(".card__title").textContent = this._name;
 
-    // get the card view
-
+    // set event listeners
     this._setEventListeners();
 
     // return the card
-    this._element.querySelector(".");
+    return this._cardElement;
   }
 }

@@ -1,4 +1,4 @@
-// import Card from "../blocks/components/Card.js";
+import Card from "../components/Card.js";
 
 const initialCards = [
   {
@@ -26,15 +26,6 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
   },
 ];
-
-// const cardData = {
-//   name: "Yosemite Valley",
-//   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-// };
-
-// const card = new Card(cardData, "#card-template");
-
-// card.getView();
 
 // ELEMENTS
 // ---------------------------------------------------------------------------------------------
@@ -169,7 +160,8 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardForm.addEventListener("submit", handleAddCardCreate);
 
 initialCards.forEach((data) => {
-  renderCard(data, cardListEl, "prepend");
+  const card = new Card(data, "#card-template");
+  renderCard(card, cardListEl, "prepend");
 });
 
 closeButtons.forEach((button) => {
