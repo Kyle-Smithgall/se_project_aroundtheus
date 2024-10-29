@@ -70,7 +70,8 @@ function closeModal(modal) {
 }
 
 function renderCard(data, list, method) {
-  const cardElement = getCardElement(data);
+  const card = new Card(data, "#card-template", handleImageClickMethod);
+  const cardElement = card.generateCard();
   list[method](cardElement);
 }
 
@@ -105,6 +106,13 @@ function getCardElement(data) {
 
 // EVENT HANDLERS
 // ---------------------------------------------------------------------------------------------
+
+function handleImageClickMethod(cardInstance) {
+  openModal(pictureModal);
+  pictureModalPhoto.src = cardInstance.getCardImage();
+  pictureModalPhoto.alt = cardInstance.getCardTitle();
+  pictureModalCaption.textContent = cardInstance.getCardTitle();
+}
 
 function handleProfileEditSubmit(evt) {
   evt.preventDefault();
@@ -159,9 +167,8 @@ addCardButton.addEventListener("click", () => openModal(addCardModal));
 
 addCardForm.addEventListener("submit", handleAddCardCreate);
 
-initialCards.forEach((data) => {
-  const card = new Card(data, "#card-template");
-  renderCard(card, cardListEl, "prepend");
+initialCards.forEach((cardData) => {
+  renderCard(cardData, cardListEl, "prepend");
 });
 
 closeButtons.forEach((button) => {

@@ -1,9 +1,17 @@
-export default class Card {
+class Card {
   constructor(cardData, cardSelector, handleImageClick) {
     this._name = cardData.name;
     this._link = cardData.link;
     this._cardSelector = cardSelector;
     this._handleImageClick = handleImageClick;
+  }
+
+  getCardImage() {
+    return this._link;
+  }
+
+  getCardTitle() {
+    return this._name;
   }
 
   _setEventListeners() {
@@ -22,13 +30,13 @@ export default class Card {
     this._cardElement
       .querySelector(".card__image")
       .addEventListener("click", () => {
-        this.handleImageClick(this);
+        this._handleImageClick(this);
       });
   }
 
   _handleLikeIcon() {
     this._cardElement
-      .querySelector("card__heart-icon")
+      .querySelector(".card__heart-icon")
       .classList.toggle("card__heart-icon_active");
   }
 
@@ -46,10 +54,10 @@ export default class Card {
     this._cardElement.querySelector(".card__title").alt = this._name;
     this._cardElement.querySelector(".card__title").textContent = this._name;
 
-    // set event listeners
     this._setEventListeners();
 
-    // return the card
     return this._cardElement;
   }
 }
+
+export default Card;
