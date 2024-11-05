@@ -176,3 +176,18 @@ closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popup));
 });
+
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__form-input",
+  submitButtonSelector: ".modal__form-button",
+  inactiveButtonClass: "modal__form-button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error",
+};
+
+const editProfileFormValidator = new FormValidator(settings, profileEditForm);
+const addCardFormValidator = new FormValidator(settings, addCardForm);
+
+editProfileFormValidator.enableValidation();
+addCardFormValidator.enableValidation();
