@@ -128,7 +128,7 @@ function handleAddCardCreate(evt) {
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
   const cardSubmitButton = document.querySelector("#card-submit-button");
-  renderCard({ name, link }, cardListEl, method);
+  renderCard({ name, link }, cardListEl, "prepend");
 
   evt.target.reset();
 
