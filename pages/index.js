@@ -76,35 +76,6 @@ function renderCard(data, list, method) {
   list[method](cardElement);
 }
 
-function getCardElement(data) {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
-  const likeButton = cardElement.querySelector(".card__heart-icon");
-  const deleteButton = cardElement.querySelector(".card__delete-icon");
-
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__heart-icon_active");
-  });
-
-  deleteButton.addEventListener("click", () => {
-    cardElement.remove();
-  });
-
-  cardImageEl.addEventListener("click", () => {
-    openModal(pictureModal);
-    pictureModalPhoto.src = cardImageEl.src;
-    pictureModalPhoto.alt = cardTitleEl.textContent;
-    pictureModalCaption.textContent = cardTitleEl.textContent;
-  });
-
-  cardImageEl.src = data.link;
-  cardImageEl.alt = data.name;
-  cardTitleEl.textContent = data.name;
-
-  return cardElement;
-}
-
 // EVENT HANDLERS
 // ---------------------------------------------------------------------------------------------
 
@@ -127,13 +98,9 @@ function handleAddCardCreate(evt) {
 
   const name = addCardTitleInput.value;
   const link = addCardLinkInput.value;
-  const cardSubmitButton = document.querySelector("#card-submit-button");
   renderCard({ name, link }, cardListEl, "prepend");
 
   evt.target.reset();
-
-  cardSubmitButton.classList.add("modal__form-button_disabled");
-  cardSubmitButton.disabled = true;
 
   closeModal(addCardModal);
 }

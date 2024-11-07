@@ -72,9 +72,7 @@ class FormValidator {
     this._setEventListeners();
     this._form.addEventListener("submit", (evt) => {
       evt.preventDefault();
-      if (evt.currentTarget.name === "card-form") {
-        this.disableButton();
-      }
+      this.disableButton();
     });
   }
 }
